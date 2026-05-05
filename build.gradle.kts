@@ -4,8 +4,16 @@ plugins {
     id("org.openrewrite.rewrite") version "7.32.1"
     id("org.itsallcode.openfasttrace") version "3.1.1"
     id("org.cyclonedx.bom") version "3.2.4"
+    id("org.sonarqube") version "7.3.0.8198"
 }
 
+
+sonar {
+  properties {
+    property("sonar.projectKey", "lekim3fb_jabref")
+    property("sonar.organization", "lekim3fb")
+  }
+}
 // OpenRewrite should rewrite all sources
 // This is the behavior when applied in the root project (https://docs.openrewrite.org/reference/gradle-plugin-configuration#multi-module-gradle-projects)
 
